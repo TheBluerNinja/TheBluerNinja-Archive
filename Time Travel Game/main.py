@@ -3,6 +3,7 @@ import variables as v
 import player_movement as pm
 import objects as obj
 from Screens import menu as menu
+from Screens.Levels import lvl1
 
 pygame.init()
 
@@ -16,7 +17,7 @@ while running:
     if v.what_screen == "Menu":
         menu.menu_screen()
     elif v.what_screen == "Lvl1":
-        break
+        lvl1.lvl1()
 
     pm.player_movement()
 

@@ -30,8 +30,8 @@ def player_movement():
             obj.player.move_ip(0, -1)
 
 
-    if obj.player.x > v.SCREEN_WIDTH - v.obj.player_WIDTH:
-        while obj.player.x > v.SCREEN_WIDTH - v.obj.player_WIDTH:
+    if obj.player.x > v.SCREEN_WIDTH - v.PLAYER_WIDTH:
+        while obj.player.x > v.SCREEN_WIDTH - v.PLAYER_WIDTH:
             obj.player.move_ip(-1, 0)
     
     if obj.player.x < 0:
