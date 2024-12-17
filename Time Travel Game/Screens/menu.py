@@ -14,8 +14,6 @@ def menu_screen():
         v.screen.blit(obj.quit_button, ((v.SCREEN_WIDTH//2-100), (v.SCREEN_HEIGHT//2+37.5)))
         
         mouse_pos = pygame.mouse.get_pos()
-        if obj.quit_button_rect.collidepoint(mouse_pos):
-                    pygame.quit()
         for event in pygame.event.get():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
@@ -23,6 +21,8 @@ def menu_screen():
                 if obj.start_button_rect.collidepoint(mouse_pos):
                             v.menu_running = False
                             v.what_screen = "Lvl1"
+                if obj.quit_button_rect.collidepoint(mouse_pos):
+                    pygame.quit()
 
 
             if event.type == pygame.QUIT:
