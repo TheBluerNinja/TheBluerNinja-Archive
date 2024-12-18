@@ -23,10 +23,6 @@ def menu_screen():
                             v.what_screen = "Lvl1"
                 if obj.quit_button_rect.collidepoint(mouse_pos):
                     pygame.quit()
-
-
-            if event.type == pygame.QUIT:
-                pygame.quit()
         
         v.clock.tick(v.FPS)
-        pygame.display.update()
+        pygame.display.flip()

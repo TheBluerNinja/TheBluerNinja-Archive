@@ -8,6 +8,7 @@ from Screens.Levels import lvl1
 pygame.init()
 
 pygame.display.set_caption("Time Travel Game")
+pygame.display.toggle_fullscreen()
 
 # GAME LOOP
 

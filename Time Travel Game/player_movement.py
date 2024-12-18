@@ -3,11 +3,6 @@ import variables as v
 import objects as obj
 
 def player_movement():
-    #Fills the screen to remove the player
-    v.screen.fill((196, 247, 101))
-
-    pygame.draw.rect(v.screen, (171,52,235), obj.player) #Draws the player
-    pygame.draw.rect(v.screen, (0, 0, 0), obj.ground) #Draws the ground
     
     key = pygame.key.get_pressed()
 
@@ -37,6 +32,9 @@ def player_movement():
     if obj.player.x < 0:
         while obj.player.x < 0:
             obj.player.move_ip(1, 0)
+
+    if obj.player.colliderect(obj.key_rect):
+        v.has_key = True
 
     v.clock.tick(v.FPS)
     pygame.display.update()
